@@ -5,9 +5,9 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
-.run(function($ionicPlatform,$cordovaToast) {
+.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -16,17 +16,6 @@ angular.module('starter', ['ionic', 'ngCordova', 'starter.controllers', 'starter
       cordova.plugins.Keyboard.disableScroll(true);
 
     }
-	
-$cordovaToast
-    .show('Here is a message', 'long', 'center')
-    .then(function(success) {
-      // success
-    }, function (error) {
-      // error
-    });
-	  
-
-	  
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();

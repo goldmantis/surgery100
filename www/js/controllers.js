@@ -1,18 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope,$cordovaInAppBrowser) {
-	
-	$scope.openAlipayWap = function() {
-		var options = {
-		                       location: 'yes',
-		                       clearcache: 'yes',
-		                       toolbar: 'yes'
-		                       };
-	    $cordovaInAppBrowser.open('http://www.baidu.com', '_blank', options)
-	         .then(function(event) {alert("1");})
-	         .catch(function(event){alert("0");});
-	}
-})
+.controller('DashCtrl', function($scope) {})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   // With the new view caching in Ionic, Controllers are only called
